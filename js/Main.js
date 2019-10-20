@@ -1,3 +1,5 @@
+import { Game } from './Game.js';
+
 let config = {
     parent: 'divCanvaParent',
     type: Phaser.AUTO,
@@ -10,24 +12,8 @@ let config = {
             debug: false
         }
     },
-    scene: {
-        preload: preload,
-        create: create,
-        update: update
-    },
+    scene: [ Game ],
     pixelArt: true
 };
 
 let game = new Phaser.Game(config);
-
-function preload(){
-    console.log('preload');
-}
-
-function create(){
-    console.log('create');
-}
-
-function update(time, delta){
-
-}
